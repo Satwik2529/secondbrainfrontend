@@ -11,8 +11,8 @@ enum ContentType {
 }
 
 export function CreateContentModal({ open, onClose }) {
-    const tittleRef = useRef<HTMLInputElement>();
-    const linkRef = useRef<HTMLInputElement>();
+    const tittleRef = useRef<HTMLInputElement>(null);
+    const linkRef = useRef<HTMLInputElement>(null);
     const [type, setType] = useState(ContentType.Youtube);
 
     async function addContent() {
@@ -52,7 +52,7 @@ export function CreateContentModal({ open, onClose }) {
                                 <div>
                                     <h1>Type</h1>
                                     <div className="flex gap-1 pl-4">
-                                        <Button
+                                        <Button size="md"
                                             onClick={() => {
                                                 setType(ContentType.Youtube);
                                             }}
@@ -63,7 +63,7 @@ export function CreateContentModal({ open, onClose }) {
                                             onClick={() => {
                                                 setType(ContentType.Twitter);
                                             }}
-                                            text="Twitter"
+                                            text="Twitter" size="md"
                                             varient={type === ContentType.Twitter ? "primary" : "secondary"}
                                         ></Button>
                                     </div>
