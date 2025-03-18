@@ -1,4 +1,4 @@
-import { Card } from "./Card";
+
 
 interface InputProps{
     placeholder:string;

@@ -59,11 +59,11 @@ export function CreateContentModal({ open, onClose }) {
                                             text="Youtube"
                                             varient={type === ContentType.Youtube ? "primary" : "secondary"}
                                         ></Button>
-                                        <Button
+                                        <Button size="md"
                                             onClick={() => {
                                                 setType(ContentType.Twitter);
                                             }}
-                                            text="Twitter" size="md"
+                                            text="Twitter"
                                             varient={type === ContentType.Twitter ? "primary" : "secondary"}
                                         ></Button>
                                     </div>
